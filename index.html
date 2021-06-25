@@ -18,18 +18,19 @@
         }
 
         div#contenedor {
-            padding: 2%;
-            overflow: hidden;
-            text-align: center;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+            width: 800px;
+            height: 800px;
+            margin: auto;
         }
 
         p {
             border: 1px solid black;
             padding: 40px;
-            float: left;
-            margin: 1px;
-            font-size: xx-large;
-            user-select: none;
+            text-align: center;
+            font-size: 30px;
         }
 
         input {
@@ -39,6 +40,17 @@
             border: 1px solid;
             border-radius: 5px;
             margin: 20px
+        }
+
+        @media only screen and (max-width: 800px) {
+            div#contenedor {
+                width: 90%;
+                height: 90%;
+            p {
+                width: 90%;
+                height: 90%;
+                padding: 4px;
+            }
         }
     </style>
 </head>
